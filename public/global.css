@@ -2,6 +2,7 @@
 *::before,
 *::after {
   box-sizing: border-box;
+  touch-action: manipulation;
 }
 
 * {
@@ -38,6 +39,10 @@ button,
 textarea,
 select {
   font: inherit;
+}
+
+button {
+  border: none;
 }
 
 @media (prefers-reduced-motion: reduce) {
