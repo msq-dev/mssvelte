@@ -3,6 +3,7 @@
 *::after {
   box-sizing: border-box;
   margin: 0;
+  line-height: calc(1em + 0.5rem);
   touch-action: manipulation;
 }
 
@@ -16,7 +17,7 @@ html:focus-within {
 }
 
 body {
-  line-height: 1.5;
+  font-size: clamp(1rem, 2vw, 1.5rem);
   -webkit-font-smoothing: antialiased;
   min-height: 100vh;
 }
@@ -26,20 +27,52 @@ a:not([class]) {
 }
 
 img,
-picture {
+picture,
+video,
+canvas,
+svg {
   display: block;
   max-width: 100%;
 }
+
+a[href],
+area,
+button,
+input,
+label[for],
+select,
+summary,
+textarea,
+[tabindex] {
+  cursor: pointer;
+}
+
 
 input,
 button,
 textarea,
 select {
+  color: inherit;
   font: inherit;
+  font-size: inherit;
+  letter-spacing: inherit;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  user-select: none
 }
 
 button {
   border: none;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
 }
 
 @media (prefers-reduced-motion: reduce) {
